@@ -4,25 +4,24 @@
 package sef.module3.activity;
 
 /**
- * @author 
- *
+ * @author Wilkie Guedes
+ * 
  */
 public class Calculator {
-		
-	public static void main(String[] args) {
-		
-	int x = 10;
-	int y = 5;
-	
-	int[] nums = {1, 2, 3, 4};
-	
-	System.out.println("Addition - " + add(x,y));
-	System.out.println("Subtraction - " + subtract(x,y));
-	System.out.println("Multiply - " + multiply(nums));
-	System.out.println("Divide - " + divide(x,y));
-	
-	}
 
+	public static void main(String[] args) {
+
+		int x = 5;
+		int y = 10;
+
+		int[] nums = { 1, 2, 3, 4 };
+
+		System.out.println("Addition - " + add(x, y));
+		System.out.println("Subtraction - " + subtract(x, y));
+		System.out.println("Multiply - " + multiply(nums));
+		System.out.println("Divide - " + divide(x, y));
+
+	}
 
 	private static int add(int x, int y) {
 		int sum = x + y;
@@ -33,8 +32,10 @@ public class Calculator {
 		int diff = 0;
 		if (x > y) {
 			// complete the code
+			diff = (x - y);
 		} else {
 			// complete the code
+			diff = (y - x);
 		}
 
 		return diff;
@@ -50,16 +51,17 @@ public class Calculator {
 
 	}
 
-	private static int divide(int x, int y) {
-		int divValue = 0;
+	private static double divide(int x, int y) {
+		double divValue = 0;
 		if (x == 0 || y == 0) {
 			// complete the code
+			return divValue;
 		} else {
 			// complete the code
+			divValue = (double)(x/y);
 		}
 		return divValue;
 
 	}
-	
-}
 
+}

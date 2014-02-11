@@ -4,50 +4,74 @@
 package sef.module3.activity;
 
 /**
- * @author 
- *
+ * @author Wilkie Guedes
+ * 
  */
 public class NumToWordsUsingMethod {
 
-		/**
-		 * @param args
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// complete the code to print text value of 8, 9 and 10
+
+		/*
+		 * Se printMyWord() fosse estatico, poderia chamar dessa forma:
+		 * printMyWord(8); //implicitamente, equivale a NumToWordsUsingMethod.printMyWord(8);
+		 * printMyWord(9);
+		 * printMyWord(10);
 		 */
-		public static void main(String[] args) {
-			// complete the code to print text value of 8, 9 and 10
 
+		NumToWordsUsingMethod ntwum = new NumToWordsUsingMethod();
+		ntwum.printMyWord(8);
+		ntwum.printMyWord(9);
+		ntwum.printMyWord(10);
+
+		NumToWords ntw = new NumToWords();
+		ntw.printMyWord(8);
+		ntw.printMyWord(9);
+		ntw.printMyWord(10);
+	}
+
+	private void printMyWord(int i) {
+
+		final String numText;
+		switch (i) {
+		case 1:
+			numText = "ONE";
+			break;
+		case 2:
+			numText = "TWO";
+			break;
+		case 3:
+			numText = "THREE";
+			break;
+		case 4:
+			numText = "FOUR";
+			break;
+		case 5:
+			numText = "FIVE";
+			break;
+		case 6:
+			numText = "SIX";
+			break;
+		case 7:
+			numText = "SEVEN";
+			break;
+		case 8:
+			numText = "EIGHT";
+			break;
+		case 9:
+			numText = "NINE";
+			break;
+		case 10:
+			numText = "TEN";
+			break;
+		default:
+			numText = "NUMBER " + i;
 		}
-
-		private static void printMyWord(int i) {
-			final String numText;
-			switch(i) {
-			case 1:
-				numText = "ONE";break;
-			case 2:
-				numText = "TWO";break;
-			case 3:
-				numText = "THREE";break;
-			case 4:
-				numText = "FOUR";break;
-			case 5:
-				numText = "FIVE";break;
-			case 6:
-				numText = "SIX";break;
-			case 7:
-				numText = "SEVEN";break;
-			case 8:
-				numText = "EIGHT";break;
-			case 9:
-				numText = "NINE";break;
-			case 10:
-				numText = "TEN";break;
-			default:
-				numText = "NUMBER " + i;
-			}
-			System.out.println(numText);
-			
-		}
-
-
-		
+		System.out.println(numText);
 
 	}
+
+}

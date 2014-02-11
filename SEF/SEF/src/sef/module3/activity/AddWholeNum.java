@@ -3,9 +3,11 @@
  */
 package sef.module3.activity;
 
+import sun.org.mozilla.javascript.internal.ast.ForLoop;
+
 /**
- * @author 
- *
+ * @author Wilkie Guedes
+ * 
  */
 public class AddWholeNum {
 
@@ -14,19 +16,27 @@ public class AddWholeNum {
 	 */
 	public static void main(String[] args) {
 		int total = 0;
+
 		for (int i = 1; i <= 50; i++) {
 			total = total + i;
 		}
 		System.out.println("Addition of Whole Numbers from 1 to 50 = " + total);
-		
-		total = 0;
-		
-		// complete the code. write for loop for i
-		total = total + i;
-		}
-		System.out.println("Addition of Whole Numbers from 50 to 100 = " + total);
 
+		total = 0;
+
+		// complete the code. write for loop for i
+		for (int i = 50; i <= 100; i++) {
+			total = total + i;
+		}
+		System.out.println("Addition of Whole Numbers from 50 to 100 = "
+				+ total);
+
+		int[] numeros = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+				16, 17, 18, 19, 20 };
+
+		for (int num : numeros) {
+			System.out.println(num);
+		}
 
 	}
-
 }
